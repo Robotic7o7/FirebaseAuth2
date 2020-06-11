@@ -54,6 +54,8 @@
   outline: none;
   cursor: pointer;
   transition: 0.5s;
+  border-radius: 5px;
+  font-size: inherit;
 }
 
 .logbtn:hover {
@@ -86,7 +88,7 @@
 .txtb span::before {
   content: attr(data-placeholder);
   position: absolute;
-  top: 50%;
+  top: -5px;
   left: 5px;
   color: #adadad;
   transform: translateY(-50%);
