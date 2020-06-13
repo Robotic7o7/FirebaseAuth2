@@ -112,3 +112,8 @@
 .focus + span::after {
   width: 100%;
 }
+
+.userdiv {
+  width: 30%;
+  position: absolute;
+}

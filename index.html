@@ -11,32 +11,59 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
   </head>
   <body class="back">
-    <form action="" class="loginform">
-      <img src="assets/icons8-user-male-500.png" width="150px" height="150px" />
-      <h1>Welcome User!</h1>
+    <div id="logindiv">
+        <form action="" class="loginform">
+            <img src="assets/icons8-user-male-500.png" width="150px" height="150px" />
+            <h1>Welcome User!</h1>
+      
+            <h2>Login</h2>
+      
+            <div class="txtb">
+              <label>Username</label>
+              <input id="email" type="text" class="inbx" />
+              <span data-placeholder=""></span>
+            </div>
+      
+            <div class="txtb">
+              <label>Password</label>
+              <input type="password" id="pass" class="inbx" />
+              <span data-placeholder=""></span>
+            </div>
+      
+            <button class="logbtn" onclick="login()">Login</button>
+      
+            <div class="btmtxt">
+              &nbsp;
+              <p align="center">Don't have an account? <a href="">Sign up</a></p>
+            </div>
+          </form>
+    </div>
+  <div id="userdiv" class="userdiv">
+    <h1>Welcome User!</h1>
+    <h2> you are logged in as</h2>
+  </div>
+    
 
-      <h2>Login</h2>
-
-      <div class="txtb">
-        <label>Username</label>
-        <input id="email" type="text" class="inbx" />
-        <span data-placeholder=""></span>
-      </div>
-
-      <div class="txtb">
-        <label>Password</label>
-        <input type="password" id="pass" class="inbx" />
-        <span data-placeholder=""></span>
-      </div>
-
-      <button class="logbtn" onclick="login()">Login</button>
-
-      <div class="btmtxt">
-        &nbsp;
-        <p align="center">Don't have an account? <a href="">Sign up</a></p>
-      </div>
-    </form>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyABEdVO6CIRwjPqqoViWZeHWojuA90jvn0",
+        authDomain: "authex-6a152.firebaseapp.com",
+        databaseURL: "https://authex-6a152.firebaseio.com",
+        projectId: "authex-6a152",
+        storageBucket: "authex-6a152.appspot.com",
+        messagingSenderId: "398591283770",
+        appId: "1:398591283770:web:8ae8ee751b7f5e46b3db03",
+        measurementId: "G-NKJ2N19WE8"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
